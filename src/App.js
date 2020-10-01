@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react'
+import Accordion from './accordion'
+
+function App(){
+
+    const items=[{
+        title:'what is react',
+        description:'React is a UI component based library'
+    },
+    {
+        title:'Who made React',
+        description:"It's made by facebook"
+    },
+    {
+        title:'Why we use React',
+        description:'It uses virtual dom and its fast as compare to another framework or library'
+    }
+
+
+]
+    return(
+        <React.Fragment>
+           <Accordion items={items}/>
+
+          
+        </React.Fragment>
+    )
 }
 
 export default App;
